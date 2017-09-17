@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<title>Hello GameDay Player</title>
+
+<xmp theme="simplex" style="display:none;">
+## You made it this far!
+Well, Well, Well, It looks like my flash drive and hidden messages have brought you this far. I hope you felt all the pain and suffering I had to endure under the reign of that horrible CEO Kyle!
+
+## Yay, what do I get? You say?
+Well, if you are reading this in the source code before you deployed it to the ECS cluster using my pre-built CodePipeline, then it means nothing to you...
+
+If you are reading this in your browser after you replaced the CastleVania Code with this code, then this means that somewhere on your ECS cluster, you have some code running that _should_ be processing SQS Messages.
+
+## How do I know for sure?
+Well, for you to know for sure, you need to be able to look at the task logs for the containers running on ECS.
+
+## Logs, oh, what logs?
+Yes... Logs, Don't tell me you didn't change the `templates/service.yml` definition to include the needed Environment Variables and Log Definitions...
+Must I do _everything_ for you?
+
+Luckily for you I got a little carried away during the commits within my castlevania.zip git repo. In there, I have a fully working git repo which contains a `service.yml` definition that has everything you need to enable ECS task logs.
+
+Go to that git repo and run the command `git log`. Look for the git commit where I made a comment about automating my code deployment. That git commit has the completed `service.yml` and you can use it to modify your version of the file before pushing it to CodeCommit again.
+
+## Profit!
+If you have deployed your code with the correct `service.yml` which includes logging and the environment variables, then you should see scoring from the migrations module on your player dashboard. If not, go take a look at the ECS Container logs.
+
+_Hint._ You can find the logs in [CloudWatch](https://{{ region }}.console.aws.amazon.com/cloudwatch/home?region={{ region }}#logStream:group=module-modernizeourrentalreturnqueueprocessor)
+
+</xmp>
+
+<script src="http://strapdownjs.com/v/0.2/strapdown.js"></script>
+</html>
